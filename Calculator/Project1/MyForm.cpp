@@ -2,11 +2,10 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-// [STAThreadAttribute] // означає, що ми запускаємо функцію main в окремому потоці
 int main(array<String^>^ args) {
-	Application::SetCompatibleTextRenderingDefault(false); // необхідне для коректної обробки текста
-	Application::EnableVisualStyles(); // підкл різні візуальні стилі
+	Application::SetCompatibleTextRenderingDefault(false); // Г­ГҐГ®ГЎГµВіГ¤Г­ГҐ Г¤Г«Гї ГЄГ®Г°ГҐГЄГІГ­Г®Вї Г®ГЎГ°Г®ГЎГЄГЁ ГІГҐГЄГ±ГІГ 
+	Application::EnableVisualStyles(); // ГЇВіГ¤ГЄГ« Г°ВіГ§Г­Ві ГўВіГ§ГіГ Г«ГјГ­Ві Г±ГІГЁГ«Ві
 	Project1::MyForm form;
-	Application::Run(% form); // передача параметр form 
+	Application::Run(% form); // ГЇГҐГ°ГҐГ¤Г Г·Г  ГЇГ Г°Г Г¬ГҐГІГ° form 
 }
 
