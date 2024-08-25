@@ -486,7 +486,7 @@ namespace Project1 {
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MyForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Калькулятор";
+			this->Text = L"ГЉГ Г«ГјГЄГіГ«ГїГІГ®Г°";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->Click += gcnew System::EventHandler(this, &MyForm::Btn_number_click);
 			this->ResumeLayout(false);
@@ -521,7 +521,6 @@ namespace Project1 {
 			};
 		}
 		Button^ button = safe_cast<Button^>(sender); 
-		// приводжу sender в об'єкт класа button для отримання даних кнопки
 		if (!isEqual) {
 			isEqual = true;
 			this->result->Text = button->Text;
@@ -529,8 +528,8 @@ namespace Project1 {
 		else this->result->Text += button->Text;
 		//(this->result->Text == "0") ? (this->result->Text = button->Text) : (this->result->Text += button->Text);
 	}
-	private: double first_num; // число введене ДО операції
-	private: char action = ' '; // операція над числами
+	private: double first_num; // Г·ГЁГ±Г«Г® ГўГўГҐГ¤ГҐГ­ГҐ Г„ГЋ Г®ГЇГҐГ°Г Г¶ВіВї
+	private: char action = ' '; // Г®ГЇГҐГ°Г Г¶ВіГї Г­Г Г¤ Г·ГЁГ±Г«Г Г¬ГЁ
 	private: bool isEqual = false;
 	private: System::Void math_action(System::Object^ sender, char action) { // + - / *
 		Button^ button = safe_cast<Button^>(sender);
@@ -594,7 +593,7 @@ namespace Project1 {
 		else if (action == '-') first_num -= second;
 		else if (action == '*') first_num *= second;
 		else {
-			if (!second) { result->Text = "Помилка"; return; }
+			if (!second) { result->Text = "ГЏГ®Г¬ГЁГ«ГЄГ "; return; }
 			else first_num /= second;
 		}
 		result->Text = first_num.ToString();
